@@ -1,4 +1,6 @@
 var print = require('./print')
+// var cors = require('./cors')
+
 class Middlewares{
   constructor(app){
     this.app = app

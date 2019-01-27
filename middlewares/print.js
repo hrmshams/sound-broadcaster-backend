@@ -1,7 +1,9 @@
 function print(req, res, next){
-  console.log('a request got from : ' + req.url)
-  res.send('i am stronger than you!')
-  // next()
+  let url = req.url
+  if (url != '/favicon.ico')
+    console.log('a request got from : ' + url)
+
+  next()
 }
 
 module.exports = print
