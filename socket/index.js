@@ -11,8 +11,9 @@ class ConfigureIO{
         console.log('user disconnected');
       });
 
-      socket.on('chat_message', function(msg){
+      socket.on('msg_from_client', function(msg){
         console.log('a message recieved: ' + msg);
+        socket.broadcast.emit('msg_from_server', msg);
       });
 
     });
