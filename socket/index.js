@@ -16,6 +16,11 @@ class ConfigureIO{
         socket.broadcast.emit('msg_from_server', msg);
       });
 
+      socket.on('voice_from_client', function(chunk){
+        console.log('a chunk recieved')
+        socket.broadcast.emit('voice_from_server', chunk)
+      })
+
     });
   }
 }
